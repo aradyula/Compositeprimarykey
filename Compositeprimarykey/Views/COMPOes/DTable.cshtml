@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewBag.Title = "DTable";
+}
+
+<h2>DTable</h2>
+
+<div class="table-responsive text-center">
+    <table id="employeeTable" class="table table-striped table-bordered nowrap table-hover" style="width:100%">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Employee Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+
+    </table>
+</div>
+<form id="accordion">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        Collapsible Group Item #1
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" name="name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="text" name="email" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #2
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Telephone:</label>
+                            <input type="text" name="telephone" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile:</label>
+                            <input type="text" name="mobile" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                        Collapsible Group Item #3
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Telephone:</label>
+                            <input type="text" name="telephone" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile:</label>
+                            <input type="text" name="mobile" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+    @*<form id="accordion">
+
+        <div class="list-group">
+
+            <!-- Step 1 -->
+            <div class="list-group-item py-3" data-acc-step>
+                <h5 class="mb-0" data-acc-title>Name &amp; Email</h5>
+                <div data-acc-content>
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" name="name" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email:</label>
+                            <input type="text" name="email" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="list-group-item py-3" data-acc-step>
+                <h5 class="mb-0" data-acc-title>Contact</h5>
+                <div data-acc-content>
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Telephone:</label>
+                            <input type="text" name="telephone" class="form-control" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mobile:</label>
+                            <input type="text" name="mobile" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="list-group-item py-3" data-acc-step>
+                <h5 class="mb-0" data-acc-title>Payment</h5>
+                <div data-acc-content>
+                    <div class="my-3">
+                        <div class="form-group">
+                            <label>Credit card:</label>
+                            <input type="text" name="card" class="form-control">
+                        </div>
+                        <div class="form-group form-row">
+                            <div class="col-sm-4">
+                                <label>Expiry:</label>
+                                <input type="text" name="expiry" class="form-control">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>CVV:</label>
+                                <input type="text" name="cvv" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </form>*@
+
+
+
+    <link href="~/Content/DataTables/css/dataTables.bootstrap4.css" rel="stylesheet" />
+    <link href="~/Content/DataTables/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+    @*<link href="~/Content/jquery-ui.css" rel="stylesheet" />*@
+
+    @section scripts{
+
+        <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+        <script src="~/Scripts/DataTables/dataTables.bootstrap4.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        @*<script src="~/Scripts/jquery.js"></script>*@
+        @*<script src="~/Scripts/jquery.highlight.js"></script>
+            <script src="~/Scripts/DataTables/searchHighlight.min.js"></script>
+            <script src="~/Scripts/notify.js"></script>*@
+
+        <script>
+        var Popup, dataTable;
+
+        $(document).ready(function () {
+            //$("#accordion").accordion({
+            //    disabled: false
+            //});
+
+            //$("#accordion").accordion({
+            //        mode: 'accordion',
+            //        autoButtonsNextClass: 'btn btn-primary float-right',
+            //        autoButtonsPrevClass: 'btn btn-light',
+            //        stepNumberClass: 'badge badge-pill badge-primary mr-1',
+            //        onSubmit: function () {
+            //            alert('Form submitted!');
+            //            return true;
+            //        }
+            //    });
+
+            dataTable = $("#employeeTable").DataTable({
+                "ajax": {
+                    "url": '@Url.Action("GetData", "COMPOes")',
+
+                    "type": "GET",
+                    "datatype": "json"
+
+                },
+                "columns": [
+                    {
+                        "data": "Sno", "render": function (data, type, full, meta) {
+                            return meta.row + 1;
+                        }
+                    },
+                    { "data": "EMPNAME"},
+                    { "data": "GENDER"},
+                    { "data": "SALARY"},
+
+                    {
+                        "data": "", "render": function (data, type, row) {
+                            debugger;
+                            empId = row.EMP_ID;
+                            deptId = row.DEPT_ID;
+                            return "<a class='btn btn-info' href='@Url.Action("Edit","COMPOes")?EMP_ID=" + row.EMP_ID + "&DEPT_ID=" + row.DEPT_ID + "'>Edit!</a>";
+                            //@*return '@Html.ActionLink("", "Edit", new { EMP_ID = empId, DEPT_ID = deptId })'*@;
+
+                        }
+                    },
+                    {
+                        "data": "", "render": function (data, type, row) {
+                            return "<a class='btn btn-danger' href='@Url.Action("Delete","COMPOes")?EMP_ID=" + row.EMP_ID + "&DEPT_ID=" + row.DEPT_ID + "'>Delete!</a>";
+                        },
+                        "orderable": false,
+                        "searchable":false
+                    },
+
+                ],
+
+                "processing":"true",
+                "language": {
+                    "emptyTable": "No data found, Please click on <b>Add New</b> Button",
+                    "processing":"Processing...Please Wait"
+                },
+                "searchHighlight": true,
+
+
+            });
+        });
+
+        function Edit(url) {
+            debugger;
+            console.log(url);
+            $.ajax({
+                type: "GET",
+                url: url,
+                datatype: "json",
+            });
+        }
+        </script>
+    }
